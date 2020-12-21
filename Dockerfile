@@ -7,5 +7,6 @@ RUN make
 
 FROM scratch
 WORKDIR /app
+VOLUME ["/app/logs"]
 COPY --from=build /build/hello .
 ENTRYPOINT ["./hello"]
