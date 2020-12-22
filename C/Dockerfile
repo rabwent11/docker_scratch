@@ -1,6 +1,5 @@
-FROM alpine AS build
+FROM gcc AS build
 WORKDIR /build
-RUN apk add build-base
 COPY Makefile .
 COPY hello.c .
 RUN make
